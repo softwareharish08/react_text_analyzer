@@ -1,6 +1,6 @@
 import propTypes from 'prop-types'
 // import {Link} from 'react-router-dom'
-import {NavLink} from 'react-router-dom'
+// import {NavLink} from 'react-router-dom'
 
 export default function Navbar(props) {
   return (
@@ -13,13 +13,13 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink 
+              <a
               className={`nav-link active text-${props.rMode}`} 
-              style={({isActive})=>({fontWeight: isActive ? 'bold' : 'normal'})} aria-current="page" to="/">Home</NavLink>
+               aria-current="page" href="/">Home</a>
             </li>
-            <li className="nav-item">
-              <NavLink style={({isActive})=>({fontWeight: isActive ? 'bold' : 'normal'})} className={`nav-link text-${props.rMode}`} to="/about">About</NavLink>
-            </li>
+            {/* <li className="nav-item">
+              <a style={({isActive})=>({fontWeight: isActive ? 'bold' : 'normal'})} className={`nav-link text-${props.rMode}`} href="#">About</a>
+            </li> */}
           </ul>
           {/* <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
